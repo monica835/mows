@@ -7,5 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jun Rey Ansing",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junreycloudstrife/mows.git"
+  },
+  "keywords": [
+    "mows",
+    "mqtt",
+    "websocket"
+  ],
+  "bugs": {
+    "url": "https://github.com/junreycloudstrife/mows/issues"
+  },
+  "homepage": "https://github.com/junreycloudstrife/mows#readme"
 }
