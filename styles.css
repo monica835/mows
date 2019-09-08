@@ -90,7 +90,7 @@ http://www.freshdesignweb.com/free-beautiful-css3-table-style.html
 		bottom: -2px; left: 0;
 		height: 3px; width: 100%;
 		content: ' ';
-		background-image: url(images/bar.png);
+		/* background-image: url(images/bar.png); */
 	}
 	
 	#fdw-pricing-table .popular-plan .header {
@@ -171,11 +171,11 @@ http://www.freshdesignweb.com/free-beautiful-css3-table-style.html
 	}
 
 	#fdw-pricing-table .plan3 .mqttconnections{
-		background:darkolivegreen;
+		background:darkcyan;
 	}
 
 	#fdw-pricing-table .plan4 .mqttconnections{
-		background: #45D0DA;
+		background:darkcyan;
 	}
 	table {
 		border-collapse: collapse;
