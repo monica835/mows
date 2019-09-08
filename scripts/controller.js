@@ -12,7 +12,7 @@ $('#btn-connect').click(function () {
 			'Youre connected to the broker!'
 
 		)
-		console.log("success");
+		console.log("SUCESSS");
 	});
 
 	$("#btn-disconnect").click(function () {
@@ -56,7 +56,7 @@ $('#btn-connect').click(function () {
 						text: 'There is an error!',
 					});
 				} else {
-					console.log("published")
+					console.log("PUBLISHED TOPIC: " +topic+" " + "MESSAGE: " +payload)
 					Swal.fire(' topic has been published successfully!')
 					var row = $("<tr>");
 					$("<td>").text(topic).appendTo($(row));
@@ -75,13 +75,14 @@ $('#btn-connect').click(function () {
 		var topic = $("#topic").val();
 		var subscribe = $("#topic-sub").val();
 		if (subscribe != topic) {
-			Swal.fire({
-				type: 'error',
-				title: 'Oops...',
-				text: 'Topic is not available!',
-			});
+			console.log("TOPIC SUBSCRIBED :"+subscribe )
+			var row = $("<tr>").attr("id", "mysub");
+					$("<td>").text(subscribe).appendTo($(row));
+					$("<td>").text(moment().format('MMMM Do YYYY, h:mm:ss a')).appendTo($(row));
+					$("#tbl-body-subscribe").append($(row));
 		}
 		else if (subscribe == topic && topic !== "") {
+			console.log("TPIC SUBSCRIBED: "+subscribe)
 			client.subscribe(topic, function (err) {
 				if (err) {
 					Swal.fire({
