@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/junreycloudstrife/mows/issues"
   },
-  "homepage": "https://github.com/junreycloudstrife/mows#readme"
+  "homepage": "https://github.com/junreycloudstrife/mows#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

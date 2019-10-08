@@ -6,135 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-    <link rel="shortcut icon" href=http://www.freshdesignweb.com/wp-content/themes/fv24/images/icon.ico />
-    <link rel="stylesheet" type="text/css" href="styles.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
 </head>
-
 <body>
     <center>
-        <h1 class="title" style><u>MQTT Mows</u></h1>
-    </center>
+        <h1 class="title" style><u>IOT SWITCH</u></h1>
     <br><br>
-    <hr>
-    <div id="fdw-pricing-table">
-        <div class="plan plan1">
-            <div class="header">Broker</div>
-            <div class="theme-topic">Address:</div>
-            <ul>
-                <li><input type="text" id="address" value="wss://test.mosquitto.org:8081/mqtt"></li>
-            </ul>
-            <hr>
-            <button class="mqttconnections" id="btn-connect">Connect</button>
-            <br><br>
-            <button class="mqttconnections" id="btn-disconnect">Disconnect</button>
-            <br><br>
-            <div class="card-footer">
-                <h2 style="margin-left:5%; font-size:15px;">Status:</h2>
-                <div id="status" class="text-center alert alert-secondary">
-                    Disconnected!
-                </div>
-            </div>
-            <div class="row">
-                <table class="text-center table table-hover table-bordered">
-                    <thead class="table-success">
-                        <h3 style="font-size:20px;">Incoming Message:</h3>
-                        <tr>
-                            <th>Topic</th>
-                            <th>Message</th>
-                            <th>Timestamp</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbl-body">
-
-                    </tbody>
-                </table>
-            </div>
-
-        </div>
-
-
+    <div class="container" style="border:2px solid black;">
         <div class="plan plan3">
-            <div class="header">Publisher</div>
-            <div class="theme-topic">Topic:</div>
-            <ul>
-                <li><input type="text" id="topic" value=" "></li>
-            </ul>
-            <div class="theme-topic">Payload:</div>
-            <ul>
-                <li><input type="text" id="message" value=" "></li>
-            </ul>
-            <hr>
-            <button class="mqttconnections" id="btn-publish">Publish</button>
-            <br><br>
-            <br><br><br><br><br>
-            <div class="row">
-                <table class="text-center table table-hover table-bordered">
-                    <thead class="table-success">
-                        <h3 style="font-size:20px;"> Message:</h3>
-                        <tr>
-                            <th>Topic</th>
-                            <th>Message</th>
-                            <th>Timestamp</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbl-body-publish">
-
-                    </tbody>
-                </table>
-            </div>
-
-
-        </div>
-
-        <div class="plan plan4">
-            <div class="header">Subscriber</div>
-
-            <div class="theme-topic">Topic:</div>
-            <ul>
-                <li><input type="text" id="topic-sub" value=" "></li>
-
-            </ul>
-            <hr>
-            <center>
-                <button class="mqttconnections" id="btn-subscribe">Subscribe</button>
-                <br><br>
-                <button class="mqttconnections" id="btn-unsubsribe">Unsubscribe</button>
-                <br><br>
-            </center><BR><br><br><br><br><br><br>
-            <div class="row">
-                <table class="text-center table table-hover table-bordered">
-                    <thead class="table-success">
-                        <h3 style="font-size:20px;"> Incoming Message:</h3>
-                        <tr>
-                            <th>Topic</th>
-                            <th>Timestamp</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbl-body-subscribe">
-
-                    </tbody>
-                </table>
-            </div>
+            <div class="theme-topic" id="status"></div>
+              <hr style="border: 1px solid red;">
+            <button  class="btn btn-success" id="btn-on">On</button>
+            <button class="btn btn-danger" id="btn-off">Off</button>
         </div>
     </div>
 
-    </div>
-
-
-    </div>
-    </div>
-
+    </center>
 </body>
-<script type="text/javascript" src="scripts/browserMqtt.js"></script>
-<script type="text/javascript" src="scripts/controller.js"></script>
+<script type="text/javascript" src="\browserMqtt.js"></script>
+<script type="text/javascript" src="\controller.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
 
